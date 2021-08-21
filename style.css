@@ -1,0 +1,172 @@
+* {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+html {
+  color: #333;
+  background: #f7f7f7;
+  font-family: sans-serif;
+  font-size: calc(1em + 1vw);
+}
+
+body {
+  max-width: 24rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+body > * {
+  margin: 1.5rem 0;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header > * {
+  display: inline-block;
+  margin: 0;
+}
+
+#header time {
+  margin-left: 1rem;
+}
+
+h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#done[data-item-count="0"] {
+  display: none;
+}
+
+[data-item-count="1"] .plural {
+  display: none;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+.counter {
+  font-weight: bold;
+}
+
+button,
+input[type="text"] {
+  padding: 0.25rem 0.5rem;
+  border: 0.1rem solid currentColor;
+  color: inherit;
+  background: transparent;
+  font-size: inherit;
+}
+
+button[type="submit"] {
+  border-color: #333;
+  color: #f7f7f7;
+  background: #333;
+}
+
+button[disabled] {
+  opacity: 0.8;
+  text-decoration: line-through;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  height: auto;
+  min-height: 2rem;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+li > label {
+  display: flex;
+  height: 100%;
+  flex: 1;
+  align-items: center;
+  padding: 0 1rem 0 0;
+}
+
+li > button {
+  margin: 0 0 0 auto;
+}
+
+.visual-checkbox {
+  display: inline-block;
+  display: flex;
+  width: 1rem;
+  height: 1rem;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border: 0.1rem solid currentColor;
+  margin: 0 1rem 0 0;
+}
+
+input[type="checkbox"]:checked ~ label .visual-checkbox:after {
+  content: "\2713"; /* check mark */
+  text-decoration: none;
+}
+
+input[type="checkbox"]:checked ~ label .item-text {
+  text-decoration: line-through;
+}
+
+form {
+  display: flex;
+}
+
+form > input[type="text"] {
+  min-width: 0;
+  flex: 1;
+  margin: 0 1rem 0 0;
+}
+
+form > button[type="submit"] {
+  margin: 0 0 0 auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color: #f7f7f7;
+    background: #333;
+  }
+
+  button[type="submit"] {
+    border-color: #f7f7f7;
+    color: #333;
+    background: #f7f7f7;
+  }
+}
+
+[tabindex="-1"]:focus {
+  outline: none;
+}
+
+button:focus,
+input[type="text"]:focus,
+input[type="checkbox"]:focus ~ label .visual-checkbox {
+  outline: 0.1rem solid #16a085;
+  outline-offset: 0.1rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To Get Done: a to-do list for this browser session only</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <noscript><p>Please enable JavaScript to get <em>To Get Done</em> done.</p></noscript>
+    <header id="header"><h1>To Get Done</h1></header>
+    <section id="todo" aria-labelledby="todo-heading" data-item-count="0">
+      <h2 id="todo-heading" class="heading" tabindex="-1"><span class="counter">0</span> thing<span class="plural">s</span> to get done</h2>
+    </section>
+    <form id="form">
+      <label for="new" class="visually-hidden">Write a new thing to get done</label>
+      <input type="text" id="new" placeholder="Get this thing done">
+      <button type="submit" id="add" disabled>Add</button>
+    </form>
+    <section id="done" aria-labelledby="done-heading" data-item-count="0">
+      <h2 id="done-heading" class="heading"><span class="counter">0</span> thing<span class="plural">s</span> got done</h2>
+    </section>
+    <span id="status" role="status" class="visually-hidden"></span>
+    <script src="to-get-done.js"></script>
+  </body>
+</html>
