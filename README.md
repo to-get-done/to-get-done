@@ -11,7 +11,7 @@ It will:
 
 ## Live Site
 
-[togetdone.org](https://www.togetdone.org/)
+https://to-get-done.github.io/to-get-done/
 
 ## Implementation
 
